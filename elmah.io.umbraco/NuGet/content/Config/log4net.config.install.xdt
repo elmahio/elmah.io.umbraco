@@ -1,4 +1,4 @@
-<log4net>
+<log4net xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
   <root>
     <appender-ref ref="ElmahIoAppender" xdt:Transform="InsertIfMissing" />
   </root>

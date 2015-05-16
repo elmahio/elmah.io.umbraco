@@ -204,7 +204,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="elmah.io.umbraco.nuspec" />
-    <None Include="NuGet\content\Config\log4net.config.transform" />
+    <None Include="NuGet\content\Config\log4net.config.install.xdt" />
     <None Include="NuGet\content\web.config.install.xdt" />
     <None Include="NuGet\content\web.config.transform" />
     <None Include="NuGet\tools\install.ps1" />
