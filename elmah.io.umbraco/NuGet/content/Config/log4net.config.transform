@@ -1,0 +1,8 @@
+<log4net>
+  <root>
+    <appender-ref ref="ElmahIoAppender" xdt:Transform="InsertIfMissing" />
+  </root>
+  <appender name="ElmahIoAppender" type="elmah.io.log4net.ElmahIoAppender, elmah.io.log4net" xdt:Transform="InsertIfMissing">
+    <logId value="ELMAH_IO_LOG_ID" />
+  </appender>
+</log4net>

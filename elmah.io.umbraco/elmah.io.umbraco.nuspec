@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>$version$</version>
+    <authors>elmah.io</authors>
+    <owners />
+    <dependencies>
+      <dependency id="UmbracoCms.Core" version="7.2.5" />
+      <dependency id="elmah.io.core" version="2.0.24" />
+      <dependency id="elmah.io.log4net" version="1.0.7" />
+    </dependencies>
+    <id>elmah.io.umbraco</id>
+    <title>elmah.io.umbraco</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Integrates elmah.io with Umbraco CMS.</description>
+    <projectUrl>https://github.com/elmahio/elmah.io.umbraco</projectUrl>
+    <iconUrl>https://secure.gravatar.com/avatar/5c4cb3646528821117abde6d2d5ee22d?s=32</iconUrl>
+  </metadata>
+  <files>
+    <file src="bin\$Configuration$\elmah.io.umbraco.dll" target="lib\net45\elmah.io.umbraco.dll" />
+    <file src="NuGet\content\web.config.transform" target="content\web.config.transform" />
+    <file src="NuGet\content\web.config.install.xdt" target="content\web.config.install.xdt" />
+    <file src="NuGet\content\Config\log4net.config.transform" target="content\Config\log4net.config.transform" />
+    <file src="NuGet\tools\install.ps1" target="tools\install.ps1" />
+  </files>
+</package>
