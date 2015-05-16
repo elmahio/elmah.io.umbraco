@@ -20,7 +20,7 @@
     <file src="bin\$Configuration$\elmah.io.umbraco.dll" target="lib\net45\elmah.io.umbraco.dll" />
     <file src="NuGet\content\web.config.transform" target="content\web.config.transform" />
     <file src="NuGet\content\web.config.install.xdt" target="content\web.config.install.xdt" />
-    <file src="NuGet\content\Config\log4net.config.transform" target="content\Config\log4net.config.transform" />
+    <file src="NuGet\content\Config\log4net.config.install.xdt" target="content\Config\log4net.config.install.xdt" />
     <file src="NuGet\tools\install.ps1" target="tools\install.ps1" />
   </files>
 </package>
