@@ -70,9 +70,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\elmah.io.client.2.0.24\lib\net40\Elmah.Io.Client.dll</HintPath>
     </Reference>
-    <Reference Include="elmah.io.log4net">
-      <HintPath>..\packages\elmah.io.log4net.1.0.7.0\lib\net40\elmah.io.log4net.dll</HintPath>
-    </Reference>
     <Reference Include="Examine, Version=0.1.63.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Examine.0.1.63.0\lib\Examine.dll</HintPath>
