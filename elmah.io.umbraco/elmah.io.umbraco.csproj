@@ -7,7 +7,7 @@
     <ProjectGuid>{58B7AEA7-D751-4F4A-8DD7-4EE4868C104F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>elmah.io.umbraco</RootNamespace>
+    <RootNamespace>Elmah.Io.Umbraco</RootNamespace>
     <AssemblyName>elmah.io.umbraco</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -56,9 +56,6 @@
     </Reference>
     <Reference Include="Elmah">
       <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
-    </Reference>
-    <Reference Include="Elmah.Io">
-      <HintPath>..\packages\elmah.io.core.2.0.24\lib\net40\Elmah.Io.dll</HintPath>
     </Reference>
     <Reference Include="Elmah.Io.Client">
       <HintPath>..\packages\elmah.io.client.2.0.24\lib\net40\Elmah.Io.Client.dll</HintPath>
@@ -198,12 +195,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ElmahIoAppender.cs" />
     <Compile Include="ElmahIoApplicationEventHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="elmah.io.umbraco.nuspec" />
+    <None Include="elmah.io.umbraco.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="NuGet\content\Config\log4net.config.install.xdt" />
     <None Include="NuGet\content\web.config.install.xdt" />
     <None Include="NuGet\content\web.config.transform" />

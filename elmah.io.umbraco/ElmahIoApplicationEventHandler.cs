@@ -1,9 +1,8 @@
 ﻿using System.Web;
-using Elmah;
 using Umbraco.Core;
 using Umbraco.Web.Routing;
 
-namespace elmah.io.umbraco
+namespace Elmah.Io.Umbraco
 {
     public class ElmahIoApplicationEventHandler : ApplicationEventHandler
     {
