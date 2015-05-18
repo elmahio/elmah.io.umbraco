@@ -19,7 +19,7 @@ namespace Elmah.Io.Umbraco
         {
             if (contentRequest.Is404)
             {
-                ErrorSignal.FromCurrentContext().Raise(new HttpException(404, "Page not fount"));
+                ErrorSignal.FromCurrentContext().Raise(new HttpException(404, "Page not found"));
             }
 
             return false;
