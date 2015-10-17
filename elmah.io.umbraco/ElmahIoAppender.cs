@@ -36,10 +36,27 @@ namespace Elmah.Io.Umbraco
                 Severity = LevelToSeverity(loggingEvent.Level),
                 DateTime = loggingEvent.TimeStamp.ToUniversalTime(),
                 Detail = loggingEvent.ExceptionObject != null ? loggingEvent.ExceptionObject.ToString() : null,
-                Data = PropertiesToData(loggingEvent.Properties)
+                Data = PropertiesToData(loggingEvent.Properties),
+                Application = loggingEvent.Domain,
+                Source = loggingEvent.LoggerName,
+                User = loggingEvent.UserName,
+                Hostname = Hostname(loggingEvent),
+                Type = Type(loggingEvent),
             };
 
             _logger.Log(message);
+        }
+
+        private string Type(LoggingEvent loggingEvent)
+        {
+            if (loggingEvent.ExceptionObject == null) return null;
+            return loggingEvent.ExceptionObject.GetType().FullName;
+        }
+
+        private string Hostname(LoggingEvent loggingEvent)
+        {
+            if (loggingEvent.Properties == null || loggingEvent.Properties.Count == 0) return null;
+            return loggingEvent.Properties["log4net:HostName"].ToString();
         }
 
         private List<Item> PropertiesToData(PropertiesDictionary properties)
