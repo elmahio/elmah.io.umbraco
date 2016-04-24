@@ -14,6 +14,7 @@
     <description>Integrates elmah.io with Umbraco CMS.</description>
     <projectUrl>https://github.com/elmahio/elmah.io.umbraco</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/elmahio/elmah.io.umbraco/master/logo-32x32.png</iconUrl>
+	<tags>Error Exception Reporing Management Logging ELMAH Diagnostics Tracing Umbraco</tags>
   </metadata>
   <files>
     <file src="bin\$Configuration$\elmah.io.umbraco.dll" target="lib\net45\elmah.io.umbraco.dll" />
