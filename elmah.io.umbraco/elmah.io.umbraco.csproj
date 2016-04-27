@@ -66,9 +66,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
     </Reference>
-    <Reference Include="Elmah.Io.Client, Version=2.0.24.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\elmah.io.client.2.0.24\lib\net40\Elmah.Io.Client.dll</HintPath>
+    <Reference Include="Elmah.Io.Client, Version=2.0.28.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.io.client.2.0.28\lib\net40\Elmah.Io.Client.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Examine, Version=0.1.63.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
