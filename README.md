@@ -1,4 +1,8 @@
 # elmah.io.umbraco
+
+[![Build status](https://ci.appveyor.com/api/projects/status/hn4jr5q06ba7vp7c?svg=true)](https://ci.appveyor.com/project/ThomasArdal/elmah-io-umbraco)
+[![NuGet](https://img.shields.io/nuget/vpre/elmah.io.umbraco.svg)](https://www.nuget.org/packages/elmah.io.umbraco)
+
 Integrates elmah.io with Umbraco CMS.
 
 ## Installation
