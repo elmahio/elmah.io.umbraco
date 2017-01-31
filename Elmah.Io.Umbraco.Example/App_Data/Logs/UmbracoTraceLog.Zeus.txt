@@ -1,0 +1,77 @@
+﻿ 2017-01-31 11:45:32,086 [P24236/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.8 application starting on ZEUS
+ 2017-01-31 11:45:32,104 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-01-31 11:45:32,112 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 7ms)
+ 2017-01-31 11:45:32,156 [P24236/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-01-31 11:45:32,158 [P24236/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-01-31 11:45:32,164 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-01-31 11:45:32,423 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 258ms)
+ 2017-01-31 11:45:32,434 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-01-31 11:45:32,442 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 7ms)
+ 2017-01-31 11:45:32,442 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-01-31 11:45:32,447 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 4ms)
+ 2017-01-31 11:45:32,457 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-01-31 11:45:32,462 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 5ms)
+ 2017-01-31 11:45:32,463 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-01-31 11:45:32,472 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 8ms)
+ 2017-01-31 11:45:32,503 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-01-31 11:45:32,506 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 3ms)
+ 2017-01-31 11:45:32,507 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-01-31 11:45:32,516 [P24236/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 9ms)
+ 2017-01-31 11:45:33,406 [P24236/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\projects\elmah.io client libraries\elmah.io.umbraco\Elmah.Io.Umbraco.Example\App_Data\Umbraco.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2017-01-31 11:45:34,453 [P24236/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-01-31 11:45:34,555 [P24236/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\projects\elmah.io client libraries\elmah.io.umbraco\Elmah.Io.Umbraco.Example\App_Data\Umbraco.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2017-01-31 11:45:34,899 [P24236/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-01-31 11:45:35,921 [P24236/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\projects\elmah.io client libraries\elmah.io.umbraco\Elmah.Io.Umbraco.Example\App_Data\Umbraco.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2017-01-31 11:45:36,265 [P24236/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-01-31 11:45:37,284 [P24236/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\projects\elmah.io client libraries\elmah.io.umbraco\Elmah.Io.Umbraco.Example\App_Data\Umbraco.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2017-01-31 11:45:37,664 [P24236/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-01-31 11:45:38,682 [P24236/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\projects\elmah.io client libraries\elmah.io.umbraco\Elmah.Io.Umbraco.Example\App_Data\Umbraco.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2017-01-31 11:45:39,193 [P24236/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-01-31 11:45:40,217 [P24236/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\projects\elmah.io client libraries\elmah.io.umbraco\Elmah.Io.Umbraco.Example\App_Data\Umbraco.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2017-01-31 11:45:40,586 [P24236/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-01-31 11:45:41,606 [P24236/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: |DataDirectory|\Umbraco.sdf. Exception: System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\projects\elmah.io client libraries\elmah.io.umbraco\Elmah.Io.Umbraco.Example\App_Data\Umbraco.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ 2017-01-31 11:45:41,947 [P24236/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-01-31 11:45:41,949 [P24236/D2/T1] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+Umbraco.Core.Exceptions.UmbracoStartupFailedException: Umbraco cannot start. A connection string is configured but Umbraco cannot connect to the database.
+   at Umbraco.Core.CoreBootManager.EnsureDatabaseConnection()
+   at Umbraco.Core.CoreBootManager.Complete(Action`1 afterComplete)
+   at Umbraco.Web.WebBootManager.Complete(Action`1 afterComplete)
+   at Umbraco.Core.UmbracoApplicationBase.StartApplication(Object sender, EventArgs e)
+   at Umbraco.Core.UmbracoApplicationBase.Application_Start(Object sender, EventArgs e)
+ 2017-01-31 11:45:52,364 [P24236/D2/T14] ERROR UmbracoExamine.DataServices.UmbracoContentService - EXCEPTION OCCURRED reading GetAllUserPropertyNames
+System.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\projects\elmah.io client libraries\elmah.io.umbraco\Elmah.Io.Umbraco.Example\App_Data\Umbraco.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at Umbraco.Core.Persistence.FaultHandling.RetryPolicy.<>c__DisplayClass1.<ExecuteAction>b__0()
+   at Umbraco.Core.Persistence.FaultHandling.RetryPolicy.ExecuteAction[TResult](Func`1 func)
+   at Umbraco.Core.Persistence.FaultHandling.RetryPolicy.ExecuteAction(Action action)
+   at Umbraco.Core.Persistence.PetaPocoConnectionExtensions.OpenWithRetry(IDbConnection connection, RetryPolicy retryPolicy)
+   at Umbraco.Core.Persistence.PetaPocoConnectionExtensions.OpenWithRetry(IDbConnection connection)
+   at Umbraco.Core.Persistence.Database.OpenSharedConnection()
+   at Umbraco.Core.Persistence.Database.<Query>d__7`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at UmbracoExamine.DataServices.UmbracoContentService.GetAllUserPropertyNames()
+ 2017-01-31 11:45:52,729 [P24236/D2/T14] INFO  Umbraco.Core.MainDom - Stopping...
+ 2017-01-31 11:45:52,729 [P24236/D2/T14] INFO  Umbraco.Core.MainDom - Released MainDom.
