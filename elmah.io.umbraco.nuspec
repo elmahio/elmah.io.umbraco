@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>$version$</version>
+    <authors>elmah.io</authors>
+    <owners />
+    <dependencies>
+      <dependency id="UmbracoCms.Core" version="7.5.8" />
+      <dependency id="elmah.io.core" version="3.0.41-pre" />
+    </dependencies>
+    <id>elmah.io.umbraco</id>
+    <title>elmah.io.umbraco</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Integrates elmah.io with Umbraco CMS.</description>
+    <projectUrl>https://github.com/elmahio/elmah.io.umbraco</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/elmahio/elmah.io.umbraco/master/logo-32x32.png</iconUrl>
+	<tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing Umbraco</tags>
+  </metadata>
+  <files>
+    <file src="elmah.io.umbraco\bin\$Configuration$\elmah.io.umbraco.dll" target="lib\net45\elmah.io.umbraco.dll" />
+    <file src="elmah.io.umbraco\NuGet\content\web.config.transform" target="content\web.config.transform" />
+    <file src="elmah.io.umbraco\NuGet\content\web.config.install.xdt" target="content\web.config.install.xdt" />
+    <file src="elmah.io.umbraco\NuGet\content\Config\log4net.config.install.xdt" target="content\Config\log4net.config.install.xdt" />
+    <file src="elmah.io.umbraco\NuGet\tools\install.ps1" target="tools\install.ps1" />
+  </files>
+</package>

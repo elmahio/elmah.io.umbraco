@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Elmah.Io.Client;
+using Elmah.Io.Client.Models;
 using log4net.Appender;
 using log4net.Core;
 using log4net.Util;
@@ -10,8 +11,9 @@ namespace Elmah.Io.Umbraco
 {
     public class ElmahIoAppender : AppenderSkeleton
     {
-        private Logger _logger;
+        public IElmahioAPI Client;
         private Guid _logId;
+        private string _apiKey;
 
         public string LogId
         {
@@ -24,18 +26,24 @@ namespace Elmah.Io.Umbraco
             }
         }
 
+        public string ApiKey
+        {
+            set { _apiKey = value; }
+        }
+
         protected override void Append(LoggingEvent loggingEvent)
         {
-            if (_logger == null)
+            if (Client == null)
             {
-                _logger = new Logger(_logId);
+                Client = ElmahioAPI.Create(_apiKey);
             }
 
-            var message = new Message(loggingEvent.RenderedMessage)
+            var message = new CreateMessage
             {
-                Severity = LevelToSeverity(loggingEvent.Level),
-                DateTime = loggingEvent.TimeStamp.ToUniversalTime(),
-                Detail = loggingEvent.ExceptionObject != null ? loggingEvent.ExceptionObject.ToString() : null,
+                Title = loggingEvent.RenderedMessage,
+                Severity = LevelToSeverity(loggingEvent.Level).ToString(),
+                DateTime = loggingEvent.TimeStamp,
+                Detail = loggingEvent.ExceptionObject?.ToString(),
                 Data = PropertiesToData(loggingEvent.GetProperties()),
                 Application = loggingEvent.Domain,
                 Source = loggingEvent.LoggerName,
@@ -44,13 +52,12 @@ namespace Elmah.Io.Umbraco
                 Type = Type(loggingEvent),
             };
 
-            _logger.Log(message);
+            Client.Messages.CreateAndNotify(_logId, message);
         }
 
         private string Type(LoggingEvent loggingEvent)
         {
-            if (loggingEvent.ExceptionObject == null) return null;
-            return loggingEvent.ExceptionObject.GetType().FullName;
+            return loggingEvent.ExceptionObject?.GetType().FullName;
         }
 
         private string Hostname(LoggingEvent loggingEvent)
