@@ -46,7 +46,7 @@ namespace Elmah.Io.Umbraco
             {
                 Title = loggingEvent.RenderedMessage,
                 Severity = LevelToSeverity(loggingEvent.Level).ToString(),
-                DateTime = loggingEvent.TimeStampUtc,
+                DateTime = loggingEvent.TimeStamp,
                 Detail = loggingEvent.ExceptionObject?.ToString(),
                 Data = PropertiesToData(loggingEvent.GetProperties()),
                 Application = Application ?? loggingEvent.Domain,
