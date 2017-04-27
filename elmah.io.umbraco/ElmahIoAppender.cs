@@ -31,21 +31,25 @@ namespace Elmah.Io.Umbraco
             set { _apiKey = value; }
         }
 
+        public string Application { get; set; }
+
+        public override void ActivateOptions()
+        {
+            EnsureClient();
+        }
+
         protected override void Append(LoggingEvent loggingEvent)
         {
-            if (Client == null)
-            {
-                Client = ElmahioAPI.Create(_apiKey);
-            }
+            EnsureClient();
 
             var message = new CreateMessage
             {
                 Title = loggingEvent.RenderedMessage,
                 Severity = LevelToSeverity(loggingEvent.Level).ToString(),
-                DateTime = loggingEvent.TimeStamp,
+                DateTime = loggingEvent.TimeStampUtc,
                 Detail = loggingEvent.ExceptionObject?.ToString(),
                 Data = PropertiesToData(loggingEvent.GetProperties()),
-                Application = loggingEvent.Domain,
+                Application = Application ?? loggingEvent.Domain,
                 Source = loggingEvent.LoggerName,
                 User = loggingEvent.UserName,
                 Hostname = Hostname(loggingEvent),
@@ -92,6 +96,14 @@ namespace Elmah.Io.Umbraco
             if (level == Level.Finest) return Severity.Verbose;
 
             return Severity.Information;
+        }
+
+        private void EnsureClient()
+        {
+            if (Client == null)
+            {
+                Client = ElmahioAPI.Create(_apiKey);
+            }
         }
     }
 }
