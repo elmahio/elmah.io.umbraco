@@ -110,3 +110,4 @@ _UpgradeReport_Files/
 Backup*/
 UpgradeLog*.XML
 .vs/
+Elmah.Io.Umbraco.Example/App_Data/
