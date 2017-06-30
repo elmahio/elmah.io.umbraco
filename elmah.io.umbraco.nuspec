@@ -7,6 +7,7 @@
     <dependencies>
       <dependency id="UmbracoCms.Core" version="7.5.8" />
       <dependency id="elmah.io.core" version="3.0.41-pre" />
+      <dependency id="elmah.io.log4net" version="3.0.26-pre" />
     </dependencies>
     <id>elmah.io.umbraco</id>
     <title>elmah.io.umbraco</title>
