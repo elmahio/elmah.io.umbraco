@@ -5,7 +5,7 @@
     <authors>elmah.io</authors>
     <owners />
     <dependencies>
-      <dependency id="UmbracoCms.Core" version="7.5.8" />
+      <dependency id="UmbracoCms.Core" version="7.6.3" />
       <dependency id="elmah.io.core" version="3.0.41-pre" />
       <dependency id="elmah.io.log4net" version="3.0.26-pre" />
     </dependencies>
