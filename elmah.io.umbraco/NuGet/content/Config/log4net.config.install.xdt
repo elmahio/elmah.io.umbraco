@@ -2,7 +2,7 @@
   <root>
     <appender-ref ref="ElmahIoAppender" xdt:Locator="Match(ref)" xdt:Transform="InsertIfMissing" />
   </root>
-  <appender name="ElmahIoAppender" type="Elmah.Io.Umbraco.ElmahIoAppender, elmah.io.umbraco" xdt:Locator="Match(name)" xdt:Transform="InsertIfMissing">
+  <appender name="ElmahIoAppender" type="Elmah.Io.Log4Net.ElmahIoAppender, elmah.io.log4net" xdt:Locator="Match(name)" xdt:Transform="InsertIfMissing">
     <logId value="ELMAH_IO_LOG_ID" />
     <apiKey value="ELMAH_IO_API_KEY" />
     <filter type="log4net.Filter.LevelRangeFilter">
