@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -77,11 +78,11 @@
       <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Elmah.Io.Client, Version=3.0.41.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Elmah.Io.Client.3.0.41-pre\lib\net45\Elmah.Io.Client.dll</HintPath>
+    <Reference Include="Elmah.Io.Client, Version=3.0.46.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elmah.Io.Client.3.0.46\lib\net45\Elmah.Io.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Elmah.Io.Log4Net, Version=3.0.26.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Elmah.Io.Log4Net.3.0.26-pre\lib\net45\Elmah.Io.Log4Net.dll</HintPath>
+    <Reference Include="Elmah.Io.Log4Net, Version=3.0.28.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elmah.Io.Log4Net.3.0.28\lib\net45\Elmah.Io.Log4Net.dll</HintPath>
     </Reference>
     <Reference Include="Examine, Version=0.1.82.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Examine.0.1.82\lib\net45\Examine.dll</HintPath>
@@ -166,7 +167,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Rest.ClientRuntime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.2.3.1\lib\net45\Microsoft.Rest.ClientRuntime.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.2.3.2\lib\net45\Microsoft.Rest.ClientRuntime.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
