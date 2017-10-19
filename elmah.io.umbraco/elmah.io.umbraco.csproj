@@ -252,15 +252,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ElmahIoAppender.cs" />
     <Compile Include="ElmahIoApplicationEventHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="NuGet\content\Config\log4net.config.install.xdt" />
-    <None Include="NuGet\content\web.config.install.xdt" />
-    <None Include="NuGet\content\web.config.transform" />
     <None Include="NuGet\tools\install.ps1" />
     <None Include="packages.config">
       <SubType>Designer</SubType>

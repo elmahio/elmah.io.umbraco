@@ -1,12 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "elmah.io.umbraco", "elmah.io.umbraco\elmah.io.umbraco.csproj", "{58B7AEA7-D751-4F4A-8DD7-4EE4868C104F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{26E174E3-2052-4782-8ED8-E4B6AF361DD5}"
 	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
 		elmah.io.umbraco.nuspec = elmah.io.umbraco.nuspec
 		README.md = README.md
 	EndProjectSection
@@ -30,5 +31,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2C8E4B5-1162-4B95-8428-1A89388D8658}
 	EndGlobalSection
 EndGlobal
