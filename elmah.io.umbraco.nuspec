@@ -14,7 +14,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Integrates elmah.io with Umbraco CMS.</description>
     <projectUrl>https://github.com/elmahio/elmah.io.umbraco</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/elmahio/elmah.io.umbraco/master/logo-32x32.png</iconUrl>
+    <iconUrl>https://secure.gravatar.com/avatar/5c4cb3646528821117abde6d2d5ee22d?s=64</iconUrl>
 	<tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing Umbraco</tags>
   </metadata>
   <files>
