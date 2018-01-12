@@ -1,4 +1,7 @@
-﻿using System.Web;
+﻿using Elmah.Contrib.WebApi;
+using System.Web;
+using System.Web.Http;
+using System.Web.Http.ExceptionHandling;
 using Umbraco.Core;
 using Umbraco.Web.Routing;
 
@@ -9,6 +12,7 @@ namespace Elmah.Io.Umbraco
         protected override void ApplicationStarting(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
         {
             ContentLastChanceFinderResolver.Current.SetFinder(new NotFoundLastChangeFinder());
+            GlobalConfiguration.Configuration.Services.Add(typeof(IExceptionLogger), new ElmahExceptionLogger());
             base.ApplicationStarting(umbracoApplication, applicationContext);
         }
     }
