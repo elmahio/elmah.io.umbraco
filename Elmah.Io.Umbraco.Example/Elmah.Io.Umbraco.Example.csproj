@@ -78,6 +78,9 @@
       <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Elmah.Contrib.WebApi, Version=1.0.10.25, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elmah.Contrib.WebApi.1.0.10.25\lib\net45\Elmah.Contrib.WebApi.dll</HintPath>
+    </Reference>
     <Reference Include="Elmah.Io.Client, Version=3.0.46.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Elmah.Io.Client.3.0.46\lib\net45\Elmah.Io.Client.dll</HintPath>
     </Reference>
