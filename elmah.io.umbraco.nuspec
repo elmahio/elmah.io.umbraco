@@ -5,9 +5,9 @@
     <authors>elmah.io</authors>
     <owners />
     <dependencies>
-      <dependency id="UmbracoCms.Core" version="7.6.3" />
-      <dependency id="elmah.io" version="[3.3.45,4)" />
-      <dependency id="elmah.io.log4net" version="[3.0.30,4)" />
+      <dependency id="UmbracoCms.Web" version="[8.0.2,9)" />
+      <dependency id="elmah.io" version="[3.3.55,4)" />
+      <dependency id="Serilog.Sinks.ElmahIo" version="[3.2.0,4)" />
       <dependency id="Elmah.Contrib.WebApi" version="[1.0.10.25,2)" />
     </dependencies>
     <id>elmah.io.umbraco</id>
@@ -19,8 +19,8 @@
 	<tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing Umbraco</tags>
   </metadata>
   <files>
-    <file src="elmah.io.umbraco\bin\$Configuration$\elmah.io.umbraco.dll" target="lib\net45\elmah.io.umbraco.dll" />
-    <file src="elmah.io.umbraco\NuGet\content\Config\log4net.config.install.xdt" target="content\Config\log4net.config.install.xdt" />
-    <file src="elmah.io.umbraco\NuGet\tools\install.ps1" target="tools\install.ps1" />
+    <file src="src\elmah.io.umbraco\bin\$Configuration$\elmah.io.umbraco.dll" target="lib\net472\elmah.io.umbraco.dll" />
+    <file src="src\elmah.io.umbraco\NuGet\content\config\serilog.user.config.install.xdt" target="content\config\serilog.user.config.install.xdt" />
+    <file src="src\elmah.io.umbraco\NuGet\tools\install.ps1" target="tools\install.ps1" />
   </files>
 </package>
