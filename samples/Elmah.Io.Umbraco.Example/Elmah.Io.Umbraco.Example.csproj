@@ -60,11 +60,11 @@
     <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
     </Reference>
-    <Reference Include="Elmah.Io, Version=3.3.55.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\elmah.io.3.3.55\lib\net45\Elmah.Io.dll</HintPath>
+    <Reference Include="Elmah.Io, Version=3.4.59.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\elmah.io.3.4.59-pre\lib\net45\Elmah.Io.dll</HintPath>
     </Reference>
-    <Reference Include="Elmah.Io.Client, Version=3.3.61.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Elmah.Io.Client.3.3.61\lib\net46\Elmah.Io.Client.dll</HintPath>
+    <Reference Include="Elmah.Io.Client, Version=3.6.72.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Elmah.Io.Client.3.6.72-pre\lib\net46\Elmah.Io.Client.dll</HintPath>
     </Reference>
     <Reference Include="Examine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Examine.1.0.0\lib\net452\Examine.dll</HintPath>
