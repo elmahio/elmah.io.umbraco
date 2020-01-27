@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ElmahIoComposer.cs" />
+    <Compile Include="ElmahIoNotificationMethod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +62,9 @@
     </PackageReference>
     <PackageReference Include="elmah.corelibrary">
       <Version>1.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="Elmah.Io.Client">
+      <Version>3.7.79</Version>
     </PackageReference>
     <PackageReference Include="UmbracoCms.Web">
       <Version>8.0.2</Version>
