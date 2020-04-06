@@ -64,7 +64,7 @@
       <Version>1.2.2</Version>
     </PackageReference>
     <PackageReference Include="Elmah.Io.Client">
-      <Version>3.7.79</Version>
+      <Version>3.7.80</Version>
     </PackageReference>
     <PackageReference Include="UmbracoCms.Web">
       <Version>8.0.2</Version>
