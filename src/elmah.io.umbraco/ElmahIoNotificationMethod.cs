@@ -20,6 +20,12 @@ namespace Elmah.Io.Umbraco
 
         public ElmahIoNotificationMethod(ILogger logger)
         {
+            if (Settings == null)
+            {
+                Enabled = false;
+                return;
+            }
+
             var apiKey = Settings["apiKey"]?.Value;
             var logId = Settings["logId"]?.Value;
             var heartbeatId = Settings["heartbeatId"]?.Value;
