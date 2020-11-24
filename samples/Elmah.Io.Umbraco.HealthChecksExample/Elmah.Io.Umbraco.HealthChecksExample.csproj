@@ -320,9 +320,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\elmah.io.umbraco\elmah.io.umbraco.csproj">
-      <Project>{58b7aea7-d751-4f4a-8dd7-4ee4868c104f}</Project>
-      <Name>elmah.io.umbraco</Name>
+    <ProjectReference Include="..\..\src\Elmah.Io.Umbraco\Elmah.Io.Umbraco.csproj">
+      <Project>{cc52ebfc-6ce8-4e90-bfa8-edb4b7e00d7b}</Project>
+      <Name>Elmah.Io.Umbraco</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
