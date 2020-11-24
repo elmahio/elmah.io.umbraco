@@ -5,7 +5,6 @@ VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{26E174E3-2052-4782-8ED8-E4B6AF361DD5}"
 	ProjectSection(SolutionItems) = preProject
-		appveyor.yml = appveyor.yml
 		elmah.io.umbraco.nuspec = elmah.io.umbraco.nuspec
 		README.md = README.md
 	EndProjectSection
@@ -18,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elmah.Io.Umbraco.Example", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elmah.Io.Umbraco.HealthChecksExample", "samples\Elmah.Io.Umbraco.HealthChecksExample\Elmah.Io.Umbraco.HealthChecksExample.csproj", "{6BC407BC-D08E-48B4-ABC3-83C970C14999}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elmah.Io.Umbraco", "src\Elmah.Io.Umbraco\Elmah.Io.Umbraco.csproj", "{CC52EBFC-6CE8-4E90-BFA8-EDB4B7E00D7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elmah.Io.Umbraco", "src\Elmah.Io.Umbraco\Elmah.Io.Umbraco.csproj", "{CC52EBFC-6CE8-4E90-BFA8-EDB4B7E00D7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
