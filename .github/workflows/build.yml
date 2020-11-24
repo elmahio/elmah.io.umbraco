@@ -20,5 +20,8 @@ jobs:
       run: nuget restore elmah.io.umbraco.sln
     - name: Build
       run: msbuild elmah.io.umbraco.sln /t:Build /p:Configuration=Release
-    - name: Pack Elmah.Io
+    - name: Pack
       run: nuget pack elmah.io.umbraco.nuspec -Version 3.5.${{ github.run_number }}-pre -Properties Configuration=Release
+    - name: Push
+      run: dotnet nuget push elmah.io.umbraco.3.5.${{ github.run_number }}-pre.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      if: ${{ github.event_name == 'push' }}
