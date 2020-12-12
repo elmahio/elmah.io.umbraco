@@ -18,6 +18,7 @@
     <description>Integrates elmah.io with Umbraco CMS.</description>
     <projectUrl>https://elmah.io/</projectUrl>
     <repository type="git" url="https://github.com/elmahio/elmah.io.umbraco" />
+    <icon>icon.png</icon>
     <iconUrl>https://secure.gravatar.com/avatar/5c4cb3646528821117abde6d2d5ee22d?s=64</iconUrl>
 	<tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing Umbraco</tags>
   </metadata>
@@ -25,5 +26,6 @@
     <file src="src\elmah.io.umbraco\bin\$Configuration$\net472\elmah.io.umbraco.dll" target="lib\net472\elmah.io.umbraco.dll" />
     <file src="src\elmah.io.umbraco\NuGet\content\config\serilog.user.config.install.xdt" target="content\config\serilog.user.config.install.xdt" />
     <file src="src\elmah.io.umbraco\NuGet\tools\install.ps1" target="tools\install.ps1" />
+    <file src="src\elmah.io.umbraco\NuGet\images\icon.png" target="icon.png" />
   </files>
 </package>
