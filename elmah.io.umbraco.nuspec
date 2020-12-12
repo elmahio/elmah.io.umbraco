@@ -24,6 +24,7 @@
   </metadata>
   <files>
     <file src="src\elmah.io.umbraco\bin\$Configuration$\net472\elmah.io.umbraco.dll" target="lib\net472\elmah.io.umbraco.dll" />
+    <file src="src\elmah.io.umbraco\bin\$Configuration$\net472\elmah.io.umbraco.xml" target="lib\net472\elmah.io.umbraco.xml" />
     <file src="src\elmah.io.umbraco\NuGet\content\config\serilog.user.config.install.xdt" target="content\config\serilog.user.config.install.xdt" />
     <file src="src\elmah.io.umbraco\NuGet\tools\install.ps1" target="tools\install.ps1" />
     <file src="src\elmah.io.umbraco\NuGet\images\icon.png" target="icon.png" />

@@ -23,4 +23,8 @@
     <PackageReference Include="UmbracoCms.Web" Version="8.0.3" />
   </ItemGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
 </Project>
