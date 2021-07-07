@@ -1,5 +1,4 @@
 ﻿using Elmah.Io.Client;
-using Elmah.Io.Client.Models;
 using System;
 using System.Net.Http.Headers;
 using System.Threading;
@@ -15,7 +14,7 @@ namespace Elmah.Io.Umbraco
     {
         internal static string _assemblyVersion = typeof(ElmahIoNotificationMethod).Assembly.GetName().Version.ToString();
 
-        private IHeartbeats heartbeats;
+        private IHeartbeatsClient heartbeats;
         private readonly ILogger logger;
 
         public ElmahIoNotificationMethod(ILogger logger)
