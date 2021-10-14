@@ -1,6 +1,7 @@
 ﻿using Elmah.Io.Client;
 using System;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Umbraco.Core.Logging;
@@ -13,6 +14,7 @@ namespace Elmah.Io.Umbraco
     public class ElmahIoNotificationMethod : NotificationMethodBase
     {
         internal static string _assemblyVersion = typeof(ElmahIoNotificationMethod).Assembly.GetName().Version.ToString();
+        internal static string _umbracoAssemblyVersion = typeof(NotificationMethodBase).Assembly.GetName().Version.ToString();
 
         private IHeartbeatsClient heartbeats;
         private readonly ILogger logger;
@@ -61,9 +63,11 @@ namespace Elmah.Io.Umbraco
 
             if (heartbeats == null)
             {
-                var api = (ElmahioAPI)ElmahioAPI.Create(ApiKey);
-                api.HttpClient.Timeout = new TimeSpan(0, 0, 30);
-                api.HttpClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue(new ProductHeaderValue("Elmah.Io.Umbraco", _assemblyVersion)));
+                var api = (ElmahioAPI)ElmahioAPI.Create(ApiKey, new ElmahIoOptions
+                {
+                    Timeout = new TimeSpan(0, 0, 30),
+                    UserAgent = UserAgent(),
+                });
                 heartbeats = api.Heartbeats;
             }
 
@@ -83,6 +87,15 @@ namespace Elmah.Io.Umbraco
                 logger.Error(GetType(), e);
                 throw;
             }
+        }
+
+        private string UserAgent()
+        {
+            return new StringBuilder()
+                .Append(new ProductInfoHeaderValue(new ProductHeaderValue("Elmah.Io.Umbraco", _assemblyVersion)).ToString())
+                .Append(" ")
+                .Append(new ProductInfoHeaderValue(new ProductHeaderValue("UmbracoCms.Web", _umbracoAssemblyVersion)).ToString())
+                .ToString();
         }
     }
 }
