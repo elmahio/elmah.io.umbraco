@@ -13,13 +13,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Elmah.Contrib.WebApi" Version="1.0.10.25" />
     <PackageReference Include="elmah.corelibrary" Version="1.2.2" />
-    <PackageReference Include="Elmah.Io.Client" Version="4.1.33-pre" />
+    <PackageReference Include="Elmah.Io.Client" Version="4.1.34-pre" />
     <PackageReference Include="UmbracoCms.Web" Version="8.0.3" />
   </ItemGroup>
 
