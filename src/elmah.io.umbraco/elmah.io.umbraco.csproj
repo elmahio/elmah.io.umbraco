@@ -19,7 +19,7 @@
   <ItemGroup>
     <PackageReference Include="Elmah.Contrib.WebApi" Version="1.0.10.25" />
     <PackageReference Include="elmah.corelibrary" Version="1.2.2" />
-    <PackageReference Include="Elmah.Io.Client" Version="4.1.34-pre" />
+    <PackageReference Include="Elmah.Io.Client" Version="4.1.36" />
     <PackageReference Include="UmbracoCms.Web" Version="8.0.3" />
   </ItemGroup>
 
