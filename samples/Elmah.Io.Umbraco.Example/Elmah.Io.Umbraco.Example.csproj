@@ -60,11 +60,11 @@
     <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
     </Reference>
-    <Reference Include="Elmah.Io, Version=4.1.29.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\elmah.io.4.1.29\lib\net45\Elmah.Io.dll</HintPath>
+    <Reference Include="Elmah.Io, Version=4.3.38.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\elmah.io.4.3.38-pre\lib\net45\Elmah.Io.dll</HintPath>
     </Reference>
-    <Reference Include="Elmah.Io.Client, Version=4.1.36.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Elmah.Io.Client.4.1.36\lib\net461\Elmah.Io.Client.dll</HintPath>
+    <Reference Include="Elmah.Io.Client, Version=4.3.43.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Elmah.Io.Client.4.3.43\lib\net461\Elmah.Io.Client.dll</HintPath>
     </Reference>
     <Reference Include="Examine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Examine.1.0.0\lib\net452\Examine.dll</HintPath>
@@ -187,8 +187,8 @@
     <Reference Include="Serilog.Settings.AppSettings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Serilog.Settings.AppSettings.2.2.2\lib\net45\Serilog.Settings.AppSettings.dll</HintPath>
     </Reference>
-    <Reference Include="Serilog.Sinks.ElmahIo, Version=4.1.12.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Serilog.Sinks.ElmahIo.4.1.12\lib\net45\Serilog.Sinks.ElmahIo.dll</HintPath>
+    <Reference Include="Serilog.Sinks.ElmahIo, Version=4.2.21.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serilog.Sinks.ElmahIo.4.2.21-pre\lib\net45\Serilog.Sinks.ElmahIo.dll</HintPath>
     </Reference>
     <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Serilog.Sinks.File.4.0.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
