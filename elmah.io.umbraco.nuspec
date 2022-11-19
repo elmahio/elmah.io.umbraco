@@ -21,7 +21,7 @@
     <icon>icon.png</icon>
     <iconUrl>https://secure.gravatar.com/avatar/5c4cb3646528821117abde6d2d5ee22d?s=64</iconUrl>
     <readme>README.md</readme>
-    <tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing Umbraco</tags>
+    <tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing Umbraco umbraco-marketplace</tags>
   </metadata>
   <files>
     <file src="src\elmah.io.umbraco\bin\$Configuration$\net472\elmah.io.umbraco.dll" target="lib\net472\elmah.io.umbraco.dll" />
