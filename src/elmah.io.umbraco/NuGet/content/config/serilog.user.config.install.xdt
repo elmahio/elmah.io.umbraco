@@ -1,8 +1,0 @@
-﻿<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-  <appSettings>
-    <add key="serilog:using:ElmahIo" value="Serilog.Sinks.ElmahIo" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing" />
-    <add key="serilog:write-to:ElmahIo.apiKey" value="ELMAH_IO_API_KEY" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing" />
-    <add key="serilog:write-to:ElmahIo.logId" value="ELMAH_IO_LOG_ID" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing" />
-    <add key="serilog:write-to:ElmahIo.restrictedToMinimumLevel" value="Warning" xdt:Locator="Match(key)" xdt:Transform="InsertIfMissing" />
-  </appSettings>
-</configuration>

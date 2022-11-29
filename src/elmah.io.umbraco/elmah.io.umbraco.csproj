@@ -1,31 +1,46 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
-    <EnablePackageValidation>true</EnablePackageValidation>
-    <!-- SourceLink -->
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <DebugType>embedded</DebugType>
-  </PropertyGroup>
+	<PropertyGroup>
+		<Description>Integrates elmah.io with Umbraco CMS.</Description>
+		<Authors>elmah.io</Authors>
+		<TargetFramework>net6.0</TargetFramework>
+		<AssemblyName>Elmah.Io.Umbraco</AssemblyName>
+		<PackageId>Elmah.Io.Umbraco</PackageId>
+		<PackageTags>Error;Exception;Reporting;Management;Logging;ELMAH;Diagnostics;Tracing;Umbraco;umbraco-marketplace</PackageTags>
+		<PackageIconUrl>https://secure.gravatar.com/avatar/5c4cb3646528821117abde6d2d5ee22d?s=64</PackageIconUrl>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageProjectUrl>https://elmah.io</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/elmahio/Elmah.Io.Umbraco</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+		<GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+		<GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<EnablePackageValidation>true</EnablePackageValidation>
+		<!-- SourceLink -->
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<DebugType>embedded</DebugType>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Elmah.Contrib.WebApi" Version="1.0.10.25" />
-    <PackageReference Include="elmah.corelibrary" Version="1.2.2" />
-    <PackageReference Include="Elmah.Io.Client" Version="4.3.43" />
-    <PackageReference Include="UmbracoCms.Web" Version="8.0.3" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Elmah.Io.Client" Version="[4.3.43,5)" />
+		<PackageReference Include="Serilog.Sinks.ElmahIo" Version="[4.2.23-pre,5)" />
+		<PackageReference Include="Umbraco.Cms" Version="10.0.0" />
+	</ItemGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  </PropertyGroup>
+	<ItemGroup>
+		<None Include="images\icon.png" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
 </Project>

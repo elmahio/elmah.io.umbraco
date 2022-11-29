@@ -2,14 +2,14 @@ name: build
 
 on:
   push:
-    branches: [ main ]
+    branches: [ umbraco10 ]
   pull_request:
-    branches: [ main ]
+    branches: [ umbraco10 ]
 
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -17,19 +17,16 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    - uses: nuget/setup-nuget@v1
-    - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1.1.3
-    - name: Restore
-      run: nuget restore elmah.io.umbraco.sln
+    - name: Install dependencies
+      run: dotnet restore
     - name: Build
-      run: msbuild elmah.io.umbraco.sln /t:Build /p:Configuration=Release
+      run: dotnet build --configuration Release --no-restore
     - name: Pack
-      run: nuget pack elmah.io.umbraco.nuspec -Version 4.2.${{ github.run_number }}-pre -Properties Configuration=Release
+      run: dotnet pack --configuration Release src/Elmah.Io.Umbraco/Elmah.Io.Umbraco.csproj /p:Version=5.0.${{ github.run_number }}-pre
     - name: Install dotnet-validate
       run: dotnet tool install --global dotnet-validate --version 0.0.1-preview.304
-    - name: Validate
-      run: dotnet-validate package local elmah.io.umbraco.4.2.${{ github.run_number }}-pre.nupkg
-    - name: Push
-      run: dotnet nuget push elmah.io.umbraco.4.2.${{ github.run_number }}-pre.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+    - name: Validate Elmah.Io.Umbraco
+      run: dotnet-validate package local src/Elmah.Io.Umbraco/bin/Release/Elmah.Io.Umbraco.5.0.${{ github.run_number }}-pre.nupkg
+    - name: Push Elmah.Io.Umbraco to nuget.org
+      run: dotnet nuget push src/Elmah.Io.Umbraco/bin/Release/Elmah.Io.Umbraco.5.0.${{ github.run_number }}-pre.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
       if: ${{ github.event_name == 'push' }}
