@@ -29,6 +29,11 @@ namespace Elmah.Io.Umbraco.Umbraco10Example
         /// </remarks>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddElmahIo(options =>
+            {
+                options.ApiKey = "API_KEY";
+                options.LogId = new Guid("LOG_ID");
+            });
             services.AddUmbraco(_env, _config)
                 .AddBackOffice()
                 .AddWebsite()
@@ -47,6 +52,8 @@ namespace Elmah.Io.Umbraco.Umbraco10Example
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseElmahIo();
 
             app.UseUmbraco()
                 .WithMiddleware(u =>
