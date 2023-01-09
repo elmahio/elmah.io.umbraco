@@ -6,9 +6,9 @@
     <owners />
     <dependencies>
       <dependency id="UmbracoCms.Web" version="[8.0.3,9)" />
-      <dependency id="elmah.io" version="[4.3.38-pre,5)" />
+      <dependency id="elmah.io" version="[4.3.40,5)" />
       <dependency id="Elmah.Io.Client" version="[4.3.43,5)" />
-      <dependency id="Serilog.Sinks.ElmahIo" version="[4.2.23-pre,5)" />
+      <dependency id="Serilog.Sinks.ElmahIo" version="[4.2.25,5)" />
       <dependency id="Elmah.Contrib.WebApi" version="[1.0.10.25,2)" />
     </dependencies>
     <id>elmah.io.umbraco</id>
