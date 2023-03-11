@@ -8,7 +8,7 @@ using Umbraco.Cms.Core.Configuration.Models;
 using Umbraco.Cms.Core.HealthChecks;
 using Umbraco.Cms.Core.HealthChecks.NotificationMethods;
 
-namespace MyProject
+namespace Elmah.Io.Umbraco
 {
     /// <summary>
     /// Health check notification method for Umbraco that log results as elmah.io heartbeats.
