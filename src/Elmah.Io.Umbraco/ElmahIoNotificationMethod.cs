@@ -18,7 +18,7 @@ namespace Elmah.Io.Umbraco
     {
         internal static string _assemblyVersion = typeof(ElmahIoNotificationMethod).Assembly.GetName().Version.ToString();
         internal static string _umbracoAssemblyVersion = typeof(NotificationMethodBase).Assembly.GetName().Version.ToString();
-        private IHeartbeatsClient heartbeats;
+        internal IHeartbeatsClient heartbeats;
 
         private string apiKey;
         private string logId;

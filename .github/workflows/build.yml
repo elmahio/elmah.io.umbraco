@@ -16,11 +16,15 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: |
+          6.0.x
+          7.0.x
     - name: Install dependencies
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal
     - name: Pack
       run: dotnet pack --configuration Release src/Elmah.Io.Umbraco/Elmah.Io.Umbraco.csproj /p:Version=5.0.${{ github.run_number }}-pre
     - name: Install dotnet-validate
