@@ -5,7 +5,6 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{26E174E3-2052-4782-8ED8-E4B6AF361DD5}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\build.yml = .github\workflows\build.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -19,7 +18,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elmah.Io.Umbraco.Umbraco10E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3DCE574A-FC8D-45A6-A694-612506F94671}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elmah.Io.Umbraco.Test", "test\Elmah.Io.Umbraco.Test\Elmah.Io.Umbraco.Test.csproj", "{73F30107-5AA2-4525-8173-2B9AE5DC161C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elmah.Io.Umbraco.Test", "test\Elmah.Io.Umbraco.Test\Elmah.Io.Umbraco.Test.csproj", "{73F30107-5AA2-4525-8173-2B9AE5DC161C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
