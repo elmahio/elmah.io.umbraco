@@ -2,9 +2,9 @@ name: build
 
 on:
   push:
-    branches: [ umbraco10 ]
+    branches: [ main ]
   pull_request:
-    branches: [ umbraco10 ]
+    branches: [ main ]
 
 jobs:
   build:
