@@ -34,9 +34,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Elmah.Io.AspNetCore" Version="[5.0.56,6)" />
-		<PackageReference Include="Elmah.Io.Client" Version="[5.0.66,6)" />
-		<PackageReference Include="Serilog.Sinks.ElmahIo" Version="[5.0.37,6)" />
+		<PackageReference Include="Elmah.Io.AspNetCore" Version="[5.1.57-pre,6)" />
+		<PackageReference Include="Elmah.Io.Client" Version="[5.1.71-pre,6)" />
+		<PackageReference Include="Serilog.Sinks.ElmahIo" Version="[5.1.39-pre,6)" />
 		<PackageReference Include="Umbraco.Cms" Version="10.0.0" />
 	</ItemGroup>
 
