@@ -18,22 +18,24 @@ namespace Elmah.Io.Umbraco.Test
         public void SetUp()
         {
             var options = Substitute.For<IOptionsMonitor<HealthChecksSettings>>();
-            var settings = new HealthChecksSettings();
-            settings.Notification = new HealthChecksNotificationSettings
+            var settings = new HealthChecksSettings
             {
-                Enabled = true,
-                NotificationMethods = new Dictionary<string, HealthChecksNotificationMethodSettings>
+                Notification = new HealthChecksNotificationSettings
                 {
+                    Enabled = true,
+                    NotificationMethods = new Dictionary<string, HealthChecksNotificationMethodSettings>
                     {
-                        "elmah.io", new HealthChecksNotificationMethodSettings
                         {
-                            Verbosity = HealthCheckNotificationVerbosity.Summary,
-                            Enabled = true,
-                            Settings = new Dictionary<string, string>
+                            "elmah.io", new HealthChecksNotificationMethodSettings
                             {
-                                { "apiKey", "API_KEY" },
-                                { "logId", "LOG_ID" },
-                                { "heartbeatId", "HEARTBEAT_ID" }
+                                Verbosity = HealthCheckNotificationVerbosity.Summary,
+                                Enabled = true,
+                                Settings = new Dictionary<string, string>
+                                {
+                                    { "apiKey", "API_KEY" },
+                                    { "logId", "LOG_ID" },
+                                    { "heartbeatId", "HEARTBEAT_ID" }
+                                }
                             }
                         }
                     }
@@ -41,8 +43,10 @@ namespace Elmah.Io.Umbraco.Test
             };
             options.CurrentValue.Returns(settings);
             heartbeatsClient = Substitute.For<IHeartbeatsClient>();
-            sut = new ElmahIoNotificationMethod(options);
-            sut.heartbeats = heartbeatsClient;
+            sut = new ElmahIoNotificationMethod(options)
+            {
+                heartbeats = heartbeatsClient
+            };
         }
 
         [Test]
@@ -88,7 +92,7 @@ namespace Elmah.Io.Umbraco.Test
         {
             return Task.FromResult<IEnumerable<HealthCheckStatus>>(new List<HealthCheckStatus>
             {
-                new HealthCheckStatus("Oh no")
+                new("Oh no")
                 {
                     ResultType = StatusResultType.Error
                 }

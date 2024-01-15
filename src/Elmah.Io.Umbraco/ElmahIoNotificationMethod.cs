@@ -16,13 +16,13 @@ namespace Elmah.Io.Umbraco
     [HealthCheckNotificationMethod("elmah.io")]
     public class ElmahIoNotificationMethod : NotificationMethodBase
     {
-        internal static string _assemblyVersion = typeof(ElmahIoNotificationMethod).Assembly.GetName().Version.ToString();
-        internal static string _umbracoAssemblyVersion = typeof(NotificationMethodBase).Assembly.GetName().Version.ToString();
+        private static string _assemblyVersion = typeof(ElmahIoNotificationMethod).Assembly.GetName().Version.ToString();
+        private static string _umbracoAssemblyVersion = typeof(NotificationMethodBase).Assembly.GetName().Version.ToString();
         internal IHeartbeatsClient heartbeats;
 
-        private string apiKey;
-        private string logId;
-        private string heartbeatId;
+        private readonly string apiKey;
+        private readonly string logId;
+        private readonly string heartbeatId;
 
         /// <summary>
         /// Create a new instance of the notification method. This constructor should not be called manually but invoked
@@ -42,7 +42,6 @@ namespace Elmah.Io.Umbraco
             if (string.IsNullOrWhiteSpace(apiKey) || string.IsNullOrWhiteSpace(logId) || string.IsNullOrWhiteSpace(heartbeatId))
             {
                 Enabled = false;
-                return;
             }
         }
 
@@ -52,7 +51,7 @@ namespace Elmah.Io.Umbraco
         /// </summary>
         public override async Task SendAsync(HealthCheckResults results)
         {
-            if (ShouldSend(results) == false)
+            if (!ShouldSend(results))
             {
                 return;
             }
@@ -82,11 +81,11 @@ namespace Elmah.Io.Umbraco
             });
         }
 
-        private string UserAgent()
+        private static string UserAgent()
         {
             return new StringBuilder()
                 .Append(new ProductInfoHeaderValue(new ProductHeaderValue("Elmah.Io.Umbraco", _assemblyVersion)).ToString())
-                .Append(" ")
+                .Append(' ')
                 .Append(new ProductInfoHeaderValue(new ProductHeaderValue("Umbraco.Cms", _umbracoAssemblyVersion)).ToString())
                 .ToString();
         }
