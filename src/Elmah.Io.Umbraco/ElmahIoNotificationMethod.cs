@@ -1,6 +1,8 @@
 ﻿using Elmah.Io.Client;
 using Microsoft.Extensions.Options;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,14 +73,69 @@ namespace Elmah.Io.Umbraco
                 heartbeats = api.Heartbeats;
             }
 
-            string result = results.AllChecksSuccessful ? "Healthy" : "Unhealthy";
             var reason = $"Results of the scheduled Umbraco Health Checks run on {DateTime.Now.ToShortDateString()} at {DateTime.Now.ToShortTimeString()} are as follows:\n\n{results.ResultsAsMarkDown(Verbosity)}";
+
+            var all = new Dictionary<string, List<HealthCheckStatus>>();
+            AddOrAppend(all, results.GetResultsForStatus(StatusResultType.Error));
+            AddOrAppend(all, results.GetResultsForStatus(StatusResultType.Warning));
+            AddOrAppend(all, results.GetResultsForStatus(StatusResultType.Info));
+            AddOrAppend(all, results.GetResultsForStatus(StatusResultType.Success));
+
+            var checks = GenerateChecks(all);
+
+            string result = "Healthy";
+            if (checks.Exists(check => check.Result == "Unhealthy")) result = "Unhealthy";
+            else if (checks.Exists(check => check.Result == "Degraded")) result = "Degraded";
 
             await heartbeats.CreateAsync(heartbeatId, logId, new CreateHeartbeat
             {
                 Result = result,
                 Reason = reason,
+                Checks = checks,
             });
+        }
+
+        private static List<Check> GenerateChecks(Dictionary<string, List<HealthCheckStatus>> all)
+        {
+            var checks = new List<Check>();
+            foreach (var checkName in all.Keys)
+            {
+                var checkResults = all[checkName];
+
+                var sb = new StringBuilder();
+                foreach (var rrr in checkResults)
+                {
+                    sb.Append("- Result: '").Append(rrr.ResultType).Append("', Message: '").Append(rrr.Message).Append('\'').AppendLine();
+                }
+
+                var checkResult = "Healthy";
+                if (checkResults.Exists(rrr => rrr.ResultType == StatusResultType.Error)) checkResult = "Unhealthy";
+                else if (checkResults.Exists(rrr => rrr.ResultType == StatusResultType.Warning)) checkResult = "Degraded";
+
+                checks.Add(new Check
+                {
+                    Name = checkName,
+                    Result = checkResult,
+                    Reason = sb.ToString(),
+                });
+            }
+
+            return checks;
+        }
+
+        private static void AddOrAppend(Dictionary<string, List<HealthCheckStatus>> all, Dictionary<string, IEnumerable<HealthCheckStatus>> dictionary)
+        {
+            foreach (var check in dictionary)
+            {
+                if (!all.ContainsKey(check.Key))
+                {
+                    all.Add(check.Key, check.Value.ToList());
+                }
+                else
+                {
+                    all[check.Key].AddRange(check.Value);
+                }
+            }
         }
 
         private static string UserAgent()
