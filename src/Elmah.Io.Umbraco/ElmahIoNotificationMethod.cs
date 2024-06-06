@@ -18,8 +18,8 @@ namespace Elmah.Io.Umbraco
     [HealthCheckNotificationMethod("elmah.io")]
     public class ElmahIoNotificationMethod : NotificationMethodBase
     {
-        private static string _assemblyVersion = typeof(ElmahIoNotificationMethod).Assembly.GetName().Version.ToString();
-        private static string _umbracoAssemblyVersion = typeof(NotificationMethodBase).Assembly.GetName().Version.ToString();
+        private static readonly string _assemblyVersion = typeof(ElmahIoNotificationMethod).Assembly.GetName().Version.ToString();
+        private static readonly string _umbracoAssemblyVersion = typeof(NotificationMethodBase).Assembly.GetName().Version.ToString();
         internal IHeartbeatsClient heartbeats;
 
         private readonly string apiKey;
