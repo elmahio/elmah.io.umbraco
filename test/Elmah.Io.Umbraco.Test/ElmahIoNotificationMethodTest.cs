@@ -53,7 +53,7 @@ namespace Elmah.Io.Umbraco.Test
         public async Task CanNotifyHealthy()
         {
             // Arrange
-            var checks = await HealthCheckResults.Create(new List<HealthCheck>());
+            var checks = await HealthCheckResults.Create([]);
 
             // Act
             await sut.SendAsync(checks);
@@ -66,10 +66,10 @@ namespace Elmah.Io.Umbraco.Test
         public async Task CanNotifyUnhealthy()
         {
             // Arrange
-            var checks = await HealthCheckResults.Create(new List<HealthCheck>
-            {
+            var checks = await HealthCheckResults.Create(
+            [
                 new TestHealthCheck()
-            });
+            ]);
             var markdown = checks.ResultsAsMarkDown(HealthCheckNotificationVerbosity.Summary);
 
             // Act
@@ -90,13 +90,13 @@ namespace Elmah.Io.Umbraco.Test
 
         public override Task<IEnumerable<HealthCheckStatus>> GetStatus()
         {
-            return Task.FromResult<IEnumerable<HealthCheckStatus>>(new List<HealthCheckStatus>
-            {
+            return Task.FromResult<IEnumerable<HealthCheckStatus>>(
+            [
                 new("Oh no")
                 {
                     ResultType = StatusResultType.Error
                 }
-            });
+            ]);
         }
     }
 }
