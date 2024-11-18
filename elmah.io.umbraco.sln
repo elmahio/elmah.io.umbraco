@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3DCE574A-F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elmah.Io.Umbraco.Test", "test\Elmah.Io.Umbraco.Test\Elmah.Io.Umbraco.Test.csproj", "{73F30107-5AA2-4525-8173-2B9AE5DC161C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elmah.Io.Umbraco.Umbraco15Example", "samples\Elmah.Io.Umbraco.Umbraco15Example\Elmah.Io.Umbraco.Umbraco15Example.csproj", "{7FBE6582-2A83-42B2-AE1B-CA529B625C5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{73F30107-5AA2-4525-8173-2B9AE5DC161C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73F30107-5AA2-4525-8173-2B9AE5DC161C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73F30107-5AA2-4525-8173-2B9AE5DC161C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FBE6582-2A83-42B2-AE1B-CA529B625C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FBE6582-2A83-42B2-AE1B-CA529B625C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FBE6582-2A83-42B2-AE1B-CA529B625C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FBE6582-2A83-42B2-AE1B-CA529B625C5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{CC52EBFC-6CE8-4E90-BFA8-EDB4B7E00D7B} = {286A897A-9FDC-4B58-B883-7A83B84D5F72}
 		{1FFEAC06-0A4D-4CF0-8851-4BED0F13DB80} = {F8938988-5887-4429-93AD-B113DC6DFE2D}
 		{73F30107-5AA2-4525-8173-2B9AE5DC161C} = {3DCE574A-FC8D-45A6-A694-612506F94671}
+		{7FBE6582-2A83-42B2-AE1B-CA529B625C5D} = {F8938988-5887-4429-93AD-B113DC6DFE2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E2C8E4B5-1162-4B95-8428-1A89388D8658}
