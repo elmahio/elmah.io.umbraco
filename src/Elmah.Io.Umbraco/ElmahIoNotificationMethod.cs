@@ -129,7 +129,7 @@ namespace Elmah.Io.Umbraco
             {
                 if (!all.ContainsKey(check.Key))
                 {
-                    all.Add(check.Key, check.Value.ToList());
+                    all.Add(check.Key, [.. check.Value]);
                 }
                 else
                 {
