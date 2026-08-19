@@ -2,7 +2,7 @@ name: build
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, apiv4 ]
   pull_request:
     branches: [ main ]
 
@@ -10,17 +10,17 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
 
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v7
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v5
+      uses: actions/setup-dotnet@v6
       with:
         dotnet-version: |
-          6.0.x
-          8.0.x
-          9.0.x
+          10.0.x
 
     - name: Install dependencies
       run: dotnet restore
@@ -37,27 +37,29 @@ jobs:
       run: dotnet test --no-restore --verbosity normal
 
     - name: Pack
-      run: dotnet pack --configuration Release src/Elmah.Io.Umbraco/Elmah.Io.Umbraco.csproj /p:Version=5.3.${{ github.run_number }}
+      run: dotnet pack --configuration Release src/Elmah.Io.Umbraco/Elmah.Io.Umbraco.csproj /p:Version=6.0.${{ github.run_number }}-pre
 
     - name: Install dotnet-validate
-      run: dotnet tool install --global dotnet-validate --version 0.0.1-preview.537
+      run: dotnet tool install --global dotnet-validate --version 0.0.1-preview.582
 
     - name: Validate Elmah.Io.Umbraco
-      run: dotnet-validate package local src/Elmah.Io.Umbraco/bin/Release/Elmah.Io.Umbraco.5.3.${{ github.run_number }}.nupkg
+      run: dotnet-validate package local src/Elmah.Io.Umbraco/bin/Release/Elmah.Io.Umbraco.6.0.${{ github.run_number }}-pre.nupkg
+
+    - name: NuGet login (OIDC → temp API key)
+      uses: NuGet/login@v1
+      id: nuget-login
+      with:
+        user: ${{ secrets.NUGET_USER }}
+      if: ${{ github.event_name == 'push' }}
 
     - name: Push Elmah.Io.Umbraco to nuget.org
-      run: dotnet nuget push src/Elmah.Io.Umbraco/bin/Release/Elmah.Io.Umbraco.5.3.${{ github.run_number }}.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push src/Elmah.Io.Umbraco/bin/Release/Elmah.Io.Umbraco.6.0.${{ github.run_number }}-pre.nupkg --api-key ${{ steps.nuget-login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
       if: ${{ github.event_name == 'push' }}
 
-    - name: Refresh Bugster
-      shell: pwsh
-      env:
-        FUNCTION_APP_URL: ${{ secrets.FUNCTION_APP_URL }}
-      run: |
-        $repoName = ($env:GITHUB_REPOSITORY -split '/')[1]
-        $json = @{ repository = 'Elmah.Io.Umbraco' } | ConvertTo-Json -Compress
-        curl --fail-with-body -X POST `
-             -H "Content-Type: application/json" `
-             -d "$json" `
-             $env:FUNCTION_APP_URL
-      if: ${{ github.event_name == 'push' }}
+    # - name: Refresh Bugster
+    #   uses: elmahio/actions/refresh-bugster-repository@v1.2
+    #   with:
+    #     signing: ${{ secrets.BUGSTER_SIGNING_KEY }}
+    #     url: ${{ secrets.FUNCTION_APP_URL }}
+    #     repository: ${{ github.event.repository.name }}
+    #   if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}

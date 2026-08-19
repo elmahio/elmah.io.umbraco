@@ -3,11 +3,10 @@
   <PropertyGroup>
     <Description>Integrates elmah.io with Umbraco CMS.</Description>
     <Authors>elmah.io</Authors>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <AssemblyName>Elmah.Io.Umbraco</AssemblyName>
     <PackageId>Elmah.Io.Umbraco</PackageId>
     <PackageTags>Error;Exception;Reporting;Management;Logging;ELMAH;Diagnostics;Tracing;Umbraco;umbraco-marketplace</PackageTags>
-    <PackageIconUrl>https://secure.gravatar.com/avatar/5c4cb3646528821117abde6d2d5ee22d?s=64</PackageIconUrl>
     <PackageIcon>icon.png</PackageIcon>
     <PackageProjectUrl>https://elmah.io</PackageProjectUrl>
     <RepositoryUrl>https://github.com/elmahio/Elmah.Io.Umbraco</RepositoryUrl>
@@ -19,7 +18,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <EnablePackageValidation>true</EnablePackageValidation>
-    <LangVersion>12.0</LangVersion>
+    <LangVersion>14.0</LangVersion>
     <!-- SourceLink -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -31,14 +30,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.400" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Elmah.Io.AspNetCore" Version="[5.3.88,6)" />
-    <PackageReference Include="Elmah.Io.Client" Version="[5.3.131,6)" />
-    <PackageReference Include="Serilog.Sinks.ElmahIo" Version="[5.3.54,6)" />
-    <PackageReference Include="Umbraco.Cms" Version="10.8.11" />
+    <PackageReference Include="Elmah.Io.AspNetCore" Version="[6.0.3-pre,7)" />
+    <PackageReference Include="Elmah.Io.Client" Version="[6.0.140-pre,7)" />
+    <PackageReference Include="Serilog.Sinks.ElmahIo" Version="[6.0.61-pre,7)" />
+    <PackageReference Include="Umbraco.Cms" Version="17.4.0" />
   </ItemGroup>
 
   <ItemGroup>

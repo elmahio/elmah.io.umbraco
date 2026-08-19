@@ -88,15 +88,15 @@ namespace Elmah.Io.Umbraco.Test
             throw new NotImplementedException();
         }
 
-        public override Task<IEnumerable<HealthCheckStatus>> GetStatus()
+        public override async Task<IEnumerable<HealthCheckStatus>> GetStatusAsync()
         {
-            return Task.FromResult<IEnumerable<HealthCheckStatus>>(
+            return
             [
                 new("Oh no")
                 {
                     ResultType = StatusResultType.Error
                 }
-            ]);
+            ];
         }
     }
 }

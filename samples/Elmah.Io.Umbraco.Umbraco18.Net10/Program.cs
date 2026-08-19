@@ -14,6 +14,7 @@ builder.Services.AddElmahIo(options =>
 
 WebApplication app = builder.Build();
 
+
 await app.BootUmbracoAsync();
 
 app.UseElmahIo();
